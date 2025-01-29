@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="sudoku_solver.css">
+    </head>
+
+    <body>
+       <div class="cell_grid">
+            <div> <input class="top_left_cell" type="number" min="1" max="9" step="1" id="num11"> </div>   
+            <div> <input class="top_cell" type="number" min="1" max="9" step="1" id="num12"> </div>
+            <div> <input class="top_cell" type="number" min="1" max="9" step="1" id="num13"> </div>
+            <div> <input class="top_cell" type="number" min="1" max="9" step="1" id="num14"> </div>
+            <div> <input class="top_cell" type="number" min="1" max="9" step="1" id="num15"> </div>
+            <div> <input class="top_cell" type="number" min="1" max="9" step="1" id="num16"> </div>
+            <div> <input class="top_cell" type="number" min="1" max="9" step="1" id="num17"> </div>
+            <div> <input class="top_cell" type="number" min="1" max="9" step="1" id="num18"> </div>
+            <div> <input class="top_cell" type="number" min="1" max="9" step="1" id="num19"> </div>
+        </div>
+        <div class="cell_grid">
+            <div> <input class="left_cell" type="number" min="1" max="9" step="1" id="num21"> </div>   
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num22"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num23"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num24"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num25"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num26"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num27"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num28"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num29"> </div>
+        </div>
+        <div class="cell_grid">
+            <div> <input class="left_cell" type="number" min="1" max="9" step="1" id="num31"> </div>   
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num32"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num33"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num34"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num35"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num36"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num37"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num38"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num39"> </div>
+        </div>
+        <div class="cell_grid">
+            <div> <input class="left_cell" type="number" min="1" max="9" step="1" id="num41"> </div>   
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num42"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num43"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num44"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num45"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num46"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num47"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num48"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num49"> </div>
+        </div>
+        <div class="cell_grid">
+            <div> <input class="left_cell" type="number" min="1" max="9" step="1" id="num51"> </div>   
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num52"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num53"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num54"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num55"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num56"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num57"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num58"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num59"> </div>
+        </div>
+        <div class="cell_grid">
+            <div> <input class="left_cell" type="number" min="1" max="9" step="1" id="num61"> </div>   
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num62"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num63"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num64"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num65"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num66"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num67"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num68"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num69"> </div>
+        </div>
+        <div class="cell_grid">
+            <div> <input class="left_cell" type="number" min="1" max="9" step="1" id="num71"> </div>   
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num72"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num73"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num74"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num75"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num76"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num77"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num78"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num79"> </div>
+        </div>
+        <div class="cell_grid">
+            <div> <input class="left_cell" type="number" min="1" max="9" step="1" id="num81"> </div>   
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num82"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num83"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num84"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num85"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num86"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num87"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num88"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num89"> </div>
+        </div>
+        <div class="cell_grid">
+            <div> <input class="left_cell" type="number" min="1" max="9" step="1" id="num91"> </div>   
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num92"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num93"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num94"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num95"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num96"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num97"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num98"> </div>
+            <div> <input class="cell" type="number" min="1" max="9" step="1" id="num99"> </div>
+        </div>  
+    </body>
+</html>
