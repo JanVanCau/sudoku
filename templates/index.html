@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sudoku Solver</title>
+        <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+        <link rel="stylesheet" href="{{ url_for('static', filename='sudoku_solver.css') }}">
+    </head>
+
+    <body>
+        <h2>Enter Your Sudoku:</h2>
+        <form method="POST" action="/">
+
+            <table>
+                {% for i in range(1,10) %}
+                    {% if i // 3 - i / 3 == 0 %}
+                        <tr class="thickrow">
+                            {% for j in range(1,10) %}
+                                {% if [i,j] in original_data %} 
+                                    <td><input class="original" type="number" min="1" max="9" step="1" name="num{{ i}}{{ j }}" value="{{ result[i-1][j-1] }}"> </td>
+                                {% else %}
+                                    <td><input class="result" type="number" min="1" max="9" step="1" name="num{{ i}}{{ j }}" value="{{ result[i-1][j-1] }}"> </td>
+                                {% endif %}
+                            {% endfor %}
+                        </tr>
+                    {% else %}
+                        <tr>
+                            {% for j in range(1,10) %}
+                                {% if [i,j] in original_data %} 
+                                    <td><input class="original" type="number" min="1" max="9" step="1" name="num{{ i}}{{ j }}" value="{{ result[i-1][j-1] }}"> </td>
+                                {% else %}
+                                    <td><input class="result" type="number" min="1" max="9" step="1" name="num{{ i}}{{ j }}" value="{{ result[i-1][j-1] }}"> </td>
+                                {% endif %}
+                            {% endfor %}
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            </table>
+
+            <p></p>
+            <button type="submit">Calculate</button> 
+
+            <!-- <p></p>
+            <p>Original values:</p>
+            <p>{{ original_data }}</p> -->
+        
+        </form>
+    </body>
+</html>
