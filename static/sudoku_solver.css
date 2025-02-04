@@ -1,0 +1,42 @@
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* For Firefox */
+    appearance: textfield; /* For other browsers */
+    text-align: center; /* Centers the text horizontally inside the input */
+    border: none;
+    width: 100%; /* Makes the input width match the table cell */
+    box-sizing: border-box; /* Ensures padding and borders are included in width */
+    font-size: 18px;}
+
+table{
+    border: 3px solid black;
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;}
+
+td{
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding:0}
+
+.original{
+    color: black;}
+    
+.result{
+    color: cornflowerblue;
+    font-weight: bold;}
+
+tr.thickrow{
+    border-bottom: 3px solid black;}
+
+td:nth-child(3){
+    border-right: 3px solid black;}
+
+td:nth-child(6){
+    border-right: 3px solid black;}
+    
