@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sudoku Solver</title>
+        <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+        <link rel="stylesheet" href="{{ url_for('static', filename='sudoku_solver.css') }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+
+    <body class="row">
+        <!-- <div class="sudoku_table"> -->
+            <form class="sudoku_form" method="POST" action="/">
+                <table class="sudoku_table">
+                    {% for i in range(1,10) %}
+                        {% if i // 3 - i / 3 == 0 %}
+                            <tr class="thickrow">
+                                {% for j in range(1,10) %}
+                                    {% if [i,j] in found_data %} 
+                                        <td><input class="result" type="number" min="1" max="9" step="1" name="num{{ i}}{{ j }}" value="{{ result[i-1][j-1] }}"> </td>
+                                    {% else %}
+                                        <td><input class="original" type="number" min="1" max="9" step="1" name="num{{ i}}{{ j }}" value="{{ result[i-1][j-1] }}"> </td>
+                                    {% endif %}
+                                {% endfor %}
+                            </tr>
+                        {% else %}
+                            <tr>
+                                {% for j in range(1,10) %}
+                                    {% if [i,j] in found_data %} 
+                                        <td><input class="result" type="number" min="1" max="9" step="1" name="num{{ i}}{{ j }}" value="{{ result[i-1][j-1] }}"> </td>
+                                    {% else %}
+                                        <td><input class="original" type="number" min="1" max="9" step="1" name="num{{ i}}{{ j }}" value="{{ result[i-1][j-1] }}"> </td>
+                                    {% endif %}
+                                {% endfor %}
+                            </tr>
+                        {% endif %}
+                    {% endfor %}
+                </table>
+            
+                <button type="submit">Calculate</button> 
+            </form> 
+        <!-- </div> -->
+
+        <div class="text">
+            <p>Enter Your Sudoku:</p>
+            <p></p>
+            <!-- <button type="submit">Calculate</button> --> 
+        </div>
+    </body>
+</html>
