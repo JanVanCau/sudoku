@@ -469,9 +469,9 @@ def index():
         end_time = time.time()
 
         if empty == 0:
-            print = f"Sudoku solved in {round(end_time - start_time, 3)}s \U0001F60E."
+            print = f"Cracked in a blink - {round(end_time - start_time, 3)} seconds flat! \U0001F60E"
         else:
-            print= "Sudoku could not be solved. It either has too few elements to be solved, or there are digits that appear more than once in the same row, column or block."
+            print= "Uh-oh! This Sudoku is unsolvable — either it’s missing too many numbers or some numbers are breaking the rules by showing up twice in the same row, column, or block! \u274C"
 
     else:
         result = [["" for _ in range(9)] for _ in range(9)]
