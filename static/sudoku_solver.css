@@ -27,7 +27,8 @@ input[type="number"] {
 @media (max-width: 500px) {
     .table-container{
         width: 90vmin;
-        height: 90vmin}
+        height: 90vmin;
+        margin-right: 0;}
 }
 
 table{
