@@ -27,7 +27,6 @@ input[type="number"] {
 @media (max-width: 500px) {
     .table-container{
         width: 90vmin;
-        height: 90vmin;
         margin-right: 0;}
 }
 
@@ -78,25 +77,22 @@ td:nth-child(6){
 
 .textbox{
     max-width: 442px;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-height: 442px;}
+    max-height: 400px;}
 
 .text{
     font-family: "Noto Sans", serif;
     font-size: 22px;
     font-weight: 400;
-    color: rgb(95, 95, 225);
-    display: flex;
-    align-items: center;}
+    color: rgb(95, 95, 225);}
 
 .smalltext{
     font-family: "Noto Sans", serif;
     font-size: 12px;
     font-weight: 400;
-    color: black;
-    display: flex;
-    align-items: center;}
+    color: black;}
 
 .button{
     font-family: "Noto Sans", serif;
@@ -107,8 +103,6 @@ td:nth-child(6){
     color: white;
     border-radius: 30px;
     border: none;
-    display: flex;
-    align-items: center;
     transition: opacity 0.3s, box-shadow 0.3s;}
 
 .button:hover{
