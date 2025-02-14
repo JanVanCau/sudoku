@@ -13,10 +13,20 @@ input[type="number"] {
 
 .sudoku_site{
     display: grid;
-    grid-template-columns: 450px 1fr;
+    grid-template-columns: 400px 400px;
+    column-gap: 50px;
     margin-left: 15px;
     margin-right: 15px;
     margin-top: 15px;}
+
+@media (max-width: 500px) {
+.sudoku_site{
+    display: grid;
+    grid-template-rows: 400px 400px;
+    row-gap: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;} }
 
 table{
     border: 2px solid rgb(69, 69, 160);
@@ -24,8 +34,7 @@ table{
     width: 400px;
     height: 400px;
     aspect-ratio: 1 / 1;
-    table-layout: fixed;
-    width: 90%;}
+    table-layout: fixed;}
 
 .textbox{
     width: 400px;
