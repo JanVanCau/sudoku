@@ -13,32 +13,34 @@
 
     <body>
         <form class="sudoku_site" method="POST" action="{{ url_for('index') }}">
-            <table>
-                {% for i in range(1,10) %}
-                    {% if i // 3 - i / 3 == 0 %}
-                        <tr class="thickrow">
-                            {% for j in range(1,10) %}
-                                {% if [i,j] in found_data %} 
-                                    <td><input class="result" type="number" min="1" max="9" step="1" name="num{{ i }}{{ j }}" value="{{ '' if result[i-1][j-1] == 0 else result[i-1][j-1] }}"> </td>
-                                {% else %}
-                                    <td><input class="original" type="number" min="1" max="9" step="1" name="num{{ i}}{{ j }}" value="{{ '' if result[i-1][j-1] == 0 else result[i-1][j-1] }}"> </td>
-                                {% endif %}
-                            {% endfor %}
-                        </tr>
-                    {% else %}  
-                        <tr>
-                            {% for j in range(1,10) %}
-                                {% if [i,j] in found_data %} 
-                                    <td><input class="result" type="number" min="1" max="9" step="1" name="num{{ i }}{{ j }}" value="{{ '' if result[i-1][j-1] == 0 else result[i-1][j-1] }}"> </td>
-                                {% else %}
-                                    <td><input class="original" type="number" min="1" max="9" step="1" name="num{{ i}}{{ j }}" value="{{ '' if result[i-1][j-1] == 0 else result[i-1][j-1] }}"> </td>
-                                {% endif %}
-                            {% endfor %}
-                        </tr>
-                    {% endif %}
-                {% endfor %}
-            </table>
-
+            <div class="table_container">
+                <table>
+                    {% for i in range(1,10) %}
+                        {% if i // 3 - i / 3 == 0 %}
+                            <tr class="thickrow">
+                                {% for j in range(1,10) %}
+                                    {% if [i,j] in found_data %} 
+                                        <td><input class="result" type="number" min="1" max="9" step="1" name="num{{ i }}{{ j }}" value="{{ '' if result[i-1][j-1] == 0 else result[i-1][j-1] }}"> </td>
+                                    {% else %}
+                                        <td><input class="original" type="number" min="1" max="9" step="1" name="num{{ i}}{{ j }}" value="{{ '' if result[i-1][j-1] == 0 else result[i-1][j-1] }}"> </td>
+                                    {% endif %}
+                                {% endfor %}
+                            </tr>
+                        {% else %}  
+                            <tr>
+                                {% for j in range(1,10) %}
+                                    {% if [i,j] in found_data %} 
+                                        <td><input class="result" type="number" min="1" max="9" step="1" name="num{{ i }}{{ j }}" value="{{ '' if result[i-1][j-1] == 0 else result[i-1][j-1] }}"> </td>
+                                    {% else %}
+                                        <td><input class="original" type="number" min="1" max="9" step="1" name="num{{ i}}{{ j }}" value="{{ '' if result[i-1][j-1] == 0 else result[i-1][j-1] }}"> </td>
+                                    {% endif %}
+                                {% endfor %}
+                            </tr>
+                        {% endif %}
+                    {% endfor %}
+                </table>
+            </div>
+            
             <div class="textbox">
                 <div class="text" style="height: max-content; margin-top: 40px; margin-bottom: 40px;">
                     <p style="margin: 0px;">Pop in your Sudoku, and solve it at lightning speed &#x26A1; !</p>
