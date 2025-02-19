@@ -13,22 +13,28 @@ input[type="number"] {
 
 .sudoku_site{
     display: grid;
-    grid-template-columns: 400px 400px;
-    column-gap: 50px;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: 15px;}
-
-.table_container{
-    width: 400px;}
+    grid-template-columns: 400px 400px;}
 
 @media (max-width: 800px) {
-.sudoku_site{
-    display: grid;
-    grid-template-columns: 400px;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: 15px;} }
+    .sudoku_site{
+        display: grid;
+        grid-template-columns: 400px;} }
+
+@media (max-width: 450px) {
+    .sudoku_site{
+        display: grid;
+        grid-template-columns: 1fr;} }
+
+.table_container{
+    width: 400px;
+    height: 400px;
+    padding: 15px;}
+
+@media (max-width: 450px) {
+    .table_container{
+        width: 100%;
+        height: 100%;
+        padding: 5px;} }
 
 table{
     border: 2px solid rgb(69, 69, 160);
@@ -40,8 +46,8 @@ table{
 
 @media (max-width: 450px) {
     .table{
-        width: 350px;
-        height: 350px;
+        width: 100%;
+        height: 100%;
         aspect-ratio: 1 / 1;
         table-layout: fixed;} }
 
@@ -50,12 +56,20 @@ table{
     height: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;}
+    justify-content: space-between;
+    padding: 15px;
+    margin-left: 35px;}
+
+@media (max-width: 800px) {
+    .textbox{
+        margin-left: 0;} }
 
 @media (max-width: 450px) {
     .textbox{
-        width: 350px;
-        height: 350px;} }
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+        margin-left: 0px;} }
 
 td{
     border: 1px solid rgb(69, 69, 160, 0.5);
