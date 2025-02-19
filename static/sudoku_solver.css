@@ -19,6 +19,9 @@ input[type="number"] {
     margin-right: 15px;
     margin-top: 15px;}
 
+.table_container{
+    width: 400px;}
+
 @media (max-width: 800px) {
 .sudoku_site{
     display: grid;
